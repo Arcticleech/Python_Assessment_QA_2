@@ -32,7 +32,18 @@ import random
 
 
 def one(string):
-    return
+    j = len(string)  
+    i=0
+    lista=[]
+    while i<j :
+        lista.append(string[i]*3)
+        i = i+1
+    result ="".join(lista)
+    return result
+        
+
+    
+    
 
     # <QUESTION 2>
 
@@ -51,7 +62,15 @@ def one(string):
 
 
 def two(num):
-    return
+    
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                return False              
+        else:
+            return True
+    else:
+        False
 
     # <QUESTION 3>
 
@@ -68,8 +87,10 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 
+
 def three(a):
-    return
+    return 4*a + 30*a + 200*a + 1000*a
+        
 
     # <QUESTION 4>
 
@@ -99,7 +120,11 @@ def three(a):
 
 
 def four(string1, string2):
-    return
+    merge = ""
+    for i in range(len(string1)):
+        merge = merge+string1[i]+string2[i]
+    
+    return merge
 
     # <QUESTION 5>
 
@@ -114,10 +139,19 @@ def four(string1, string2):
     # <HINT>
     # There is a module which can be used to generate random numbers, this module is called random.
     # The random module contains a function called randint.
-
+import random
 
 def five():
-    return
+    this = 100
+    that = 200
+    times = 5
+
+    count = 0
+    numlist = []
+    while count < times:
+        numlist.append(random.randrange(this,that,2))
+        count+=1
+    return numlist
 
     # <QUESTION 6>
 
@@ -137,7 +171,13 @@ def five():
 
 
 def six(string):
-    return
+    new_str = string[-2:].lower()
+    if new_str == "py":   
+        return True
+    else:
+        return False
+
+
 
     # <QUESTION 7>
 
@@ -162,7 +202,14 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    alphalist = [a, b, c]
+    new_list = sorted(alphalist)
+
+    if new_list[1] - new_list[0] == new_list[2] - new_list[1]:
+        return True
+    else:
+        return False
+
 
     # <QUESTION 8>
 
@@ -183,6 +230,8 @@ def seven(a, b, c):
 def eight(string, num):
     return
 
+
+    
     # <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
@@ -198,9 +247,24 @@ def eight(string, num):
     # There are no hints for this question.
 
 
+
 def nine(string1, string2):
-    # make sure string1 is the shortest of the two
-    return
+    if len(string1) > len(string2):
+        x = string2
+        y = string1
+        
+        for i in x:
+            if i in y:
+                return True
+        else:
+            False
+    else:
+        for i in string1:
+            if i in string2:
+                return True
+        else:
+            False
+
 
     # <QUESTION 10>
 
